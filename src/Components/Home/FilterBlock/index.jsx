@@ -1,97 +1,40 @@
 /** @format */
 
-import React from 'react';
-import { Block, Text } from './style';
+import React, { useState } from 'react';
+import ProductBlock from '../../../Generic/ProductBlock';
+import { data } from '../../../Mock/data';
+import { Block, Text, TopCategory, ViewBlock } from './style';
 
 const FilterBlock = () => {
+	// const [category, setCategory] = useState('housePlants');
+
+	const [mockData, setMockData] = useState(data);
+	
 	return (
 		<Block>
 			<Block.Left>
 				<Text size='16px' lineHeight='16px' fontWeight='700' color='#3D3D3D'>
 					Categories
 				</Text>
-				<Text
-					size='15px'
-					lineHeight='40px'
-					fontWeight='700'
-					color='#3D3D3D'
-					margin='10px 13px'>
-					House Plants
-				</Text>
-				<Text
-					size='15px'
-					lineHeight='40px'
-					fontWeight='700'
-					color='#3D3D3D'
-					margin='10px 13px'>
-					Potter Plants
-				</Text>
-				<Text
-					size='15px'
-					lineHeight='40px'
-					fontWeight='700'
-					color='#3D3D3D'
-					margin='10px 13px'>
-					Seeds
-				</Text>
-				<Text
-					size='15px'
-					lineHeight='40px'
-					fontWeight='700'
-					color='#3D3D3D'
-					margin='10px 13px'>
-					Small Plants
-				</Text>
-				<Text
-					size='15px'
-					lineHeight='40px'
-					fontWeight='700'
-					color='#3D3D3D'
-					margin='10px 13px'>
-					Big Plants
-				</Text>
-				<Text
-					size='15px'
-					lineHeight='40px'
-					fontWeight='700'
-					color='#3D3D3D'
-					margin='10px 13px'>
-					Succulents
-				</Text>
-				<Text
-					size='15px'
-					lineHeight='40px'
-					fontWeight='700'
-					color='#3D3D3D'
-					margin='10px 13px'>
-					Big Plants
-				</Text>
-				<Text
-					size='15px'
-					lineHeight='40px'
-					fontWeight='700'
-					color='#3D3D3D'
-					margin='10px 13px'>
-					Trerrariums
-				</Text>
-				<Text
-					size='15px'
-					lineHeight='40px'
-					fontWeight='700'
-					color='#3D3D3D'
-					margin='10px 13px'>
-					Gardening
-				</Text>
-				<Text
-					size='15px'
-					lineHeight='40px'
-					fontWeight='700'
-					color='#3D3D3D'
-					margin='10px 13px'>
-					Accessories
-				</Text>
+				<Text categoryText={true}>House Plants</Text>
+				<Text categoryText={true}>Potter Plants</Text>
+				<Text categoryText={true}>Seeds</Text>
+				<Text categoryText={true}>Small Plants</Text>
+				<Text categoryText={true}>Big Plants</Text>
+				<Text categoryText={true}>Succulents</Text>
+				<Text categoryText={true}>Big Plants</Text>
+				<Text categoryText={true}>Trerrariums</Text>
+				<Text categoryText={true}>Gardening</Text>
+				<Text categoryText={true}>Accessories</Text>
 			</Block.Left>
-			<Block.Right></Block.Right>
+			<Block.Right>
+				<TopCategory></TopCategory>
+				<ViewBlock>
+					{mockData.products.map(
+						(value, id) => <ProductBlock key={id} img={value.img} title={value.title} price={value.price} desc={value.productDesc} />
+					)}
+				</ViewBlock>
+			</Block.Right>
 		</Block>
 	);
 };

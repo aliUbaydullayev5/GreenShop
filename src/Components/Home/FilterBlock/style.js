@@ -1,22 +1,19 @@
+/** @format */
+
 import styled from 'styled-components';
 
-
 const Block = styled.div`
-    border: 1px solid red;
-    width: 100%;
-    height: 900px;
-    display: grid;
-    grid-template-columns: 310px 1fr;
-
+	width: 100%;
+	height: 900px;
+	display: grid;
+	grid-template-columns: 310px 1fr;
 `;
 Block.Left = styled.div`
-    border: 1px solid red;
-    padding: 14px 18px;
-
+	padding: 14px 18px;
 `;
 Block.Right = styled.div`
-    border: 1px solid red;
-
+    display: grid;
+    grid-template-rows: 23px 1fr;
 `;
 
 const Text = styled.div`
@@ -26,7 +23,42 @@ const Text = styled.div`
 	line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : 'none')};
 	display: ${({ span }) => (span ? 'inline-block' : 'block')};
 	margin: ${({ margin }) => (margin ? margin : '0 0')};
+
+	${({ categoryText }) =>
+		categoryText &&
+		'font-size: 15px; line-height: 40px; color: #3D3D3D; margin: 10px 13px; font-weight: 700; cursor: pointer;'};
+
+	:hover {
+		color: #46a358;
+	}
 `;
 
 
-export { Block, Text };
+
+const TopCategory = styled.div`
+	width: 100%;
+
+`;
+
+const ViewBlock = styled.div`
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 40px;
+	padding: 20px 54px;
+`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export { Block, Text, TopCategory, ViewBlock };
