@@ -19,27 +19,23 @@ Block.Right = styled.div`
 const Text = styled.div`
 	font-size: ${({ size }) => (size ? size : '16px')};
 	font-weight: ${({ fontWeight }) => (fontWeight ? fontWeight : '400')};
-	color: ${({ color }) => (color ? color : '#000')};
-	line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : 'none')};
+	color: ${({ color }) => (color ? color : '#3D3D3D')};
+	line-height: ${({ lineHeight }) => (lineHeight ? lineHeight : '16px')};
 	display: ${({ span }) => (span ? 'inline-block' : 'block')};
 	margin: ${({ margin }) => (margin ? margin : '0 0')};
-
+	cursor: pointer;
 	${({ categoryText }) =>
 		categoryText &&
-		'font-size: 15px; line-height: 40px; color: #3D3D3D; margin: 10px 13px; font-weight: 700; cursor: pointer;'};
-
+		'font-size: 15px; line-height: 40px; margin: 10px 13px; font-weight: 700; cursor: pointer;'};
 	:hover {
 		color: #46a358;
 	}
 `;
 
-
-
 const TopCategory = styled.div`
 	width: 100%;
 
 `;
-
 const ViewBlock = styled.div`
 	width: 100%;
 	display: grid;

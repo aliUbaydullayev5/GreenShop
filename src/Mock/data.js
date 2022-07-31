@@ -50,7 +50,7 @@ export const data = {
 			price: 23.5,
 			new: true,
 			sale: true,
-			type: '',
+			type: 'housePlants',
 			productDesc: 'Desc',
 		},
 		{
@@ -60,7 +60,7 @@ export const data = {
 			price: 167.0,
 			new: true,
 			sale: true,
-			type: '',
+			type: 'bigPlants',
 			productDesc: 'Desc',
 		},
 		{
@@ -70,7 +70,7 @@ export const data = {
 			price: 654.84,
 			new: true,
 			sale: true,
-			type: '',
+			type: 'gardening',
 			productDesc: 'Desc',
 		},
 		{
@@ -80,7 +80,7 @@ export const data = {
 			price: 321.32,
 			new: true,
 			sale: true,
-			type: '',
+			type: 'smallPlants',
 			productDesc: 'Desc',
 		},
 		{
@@ -90,7 +90,7 @@ export const data = {
 			price: 243.42,
 			new: true,
 			sale: true,
-			type: '',
+			type: 'accessories',
 			productDesc: 'Desc',
 		},
 		{
@@ -100,7 +100,7 @@ export const data = {
 			price: 134.32,
 			new: true,
 			sale: true,
-			type: '',
+			type: 'gardening',
 			productDesc: 'Desc',
 		},
 		{
@@ -110,7 +110,7 @@ export const data = {
 			price: 234.32,
 			new: true,
 			sale: true,
-			type: '',
+			type: 'trerrariums',
 			productDesc: 'Desc',
 		},
 		{
@@ -120,7 +120,7 @@ export const data = {
 			price: 213.32,
 			new: true,
 			sale: true,
-			type: '',
+			type: 'housePlants',
 			productDesc: 'Desc',
 		},
 		{
@@ -130,7 +130,7 @@ export const data = {
 			price: 224.23,
 			new: true,
 			sale: true,
-			type: '',
+			type: 'smallPlants',
 			productDesc: 'Desc',
 		},
 		{
@@ -144,7 +144,7 @@ export const data = {
 			productDesc: 'Desc',
 		},
 		{
-			id: 100011,
+			id: 11,
 			img: img11,
 			title: 'Flower 1',
 			price: 165.54,
